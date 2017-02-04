@@ -1,0 +1,9 @@
+String arithmetic
+
+puts "I like" + " apple pie" # <= I like apple pie
+
+puts "blink " *4 # <= blink blink blink blink
+
+Blackslash to escape string quotations
+
+'You\'re swell!' # <= You're swell!

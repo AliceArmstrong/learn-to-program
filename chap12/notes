@@ -1,0 +1,67 @@
+New classes of objects
+
+New method for getting object from class.
+
+  alpha = Array.new + [12345] # <= Array addition.
+  beta = String.new + 'hello' # <= String addition.
+  karma = Time.new # <= Current date and time.
+  puts "alpha = #{alpha}"
+  puts "beta = #{beta}"
+  puts "karma = #{karma}"
+>alpha = [12345]
+>beta = hello
+>karma = 2013-06-15 22:59:02 -0700
+
+Because we can create array and string literals using [...] and '...', we rarely
+create them using new. (String.new creates an empty string, and Array.new
+creates an empty array.) Also, numbers are special exceptions: you can’t create
+an integer with Integer.new.
+
+Time class
+The time object represents moments in time.
+You can add or subtract numbers to/from times to get new times;
+adding 1.5 to a time makes a new time 1.5 seconds later.
+  time = Time.new # The moment we ran this code.
+  time2 = time + 60 # One minute later.
+  puts time
+  puts time2
+>2013-06-15 23:01:14 -0700
+>2013-06-15 23:02:14 -0700
+
+Time.local makes time for specific moment.
+  puts Time.local(2000, 1, 1) # <= Y2K.
+  puts Time.local(1990, 7, 1, 0, 0) # <= When I was born.
+>2000-01-01 00:00:00 -0800 # <= -0800 is difference between local time and GMT
+>1976-08-03 13:31:00 -0700
+  puts Time.gm(1955, 11, 5) # <= Time.gm is for GMT
+
+Hash class
+In an array, slots are lined up in a row, each numbered.
+In a hash, slots are jumbled together and any object can refer to a slot.
+Hashes are good for several things that don't fit in ordered list.
+  dict_array = [] # array literal; same as Array.new
+  dict_hash = {} # hash literal; same as Hash.new
+  dict_array[0] = 'candle'
+  dict_array[1] = 'glasses'
+  dict_array[2] = 'truck'
+  dict_array[3] = 'Alicia'
+  dict_hash['shia-a'] = 'candle'
+  dict_hash['shaya' ] = 'glasses'
+  dict_hash['shasha'] = 'truck'
+  dict_hash['sh-sha'] = 'Alicia'
+  dict_array.each do |word|
+  puts word
+  end
+  dict_hash.each do |c_word, word|
+  puts "#{c_word}: #{word}"
+  end
+
+Ranges
+Ranges represent intervals of numbers.
+  letters = 'a'..'c' # <= range literal of a-c
+  puts(['a','b','c'] == letters.to_a) # <= convert range to array
+
+  ('A'..'Z').each do |letter| # <= iterate over a range
+  print letter
+  end
+  puts

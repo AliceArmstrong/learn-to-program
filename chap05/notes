@@ -1,0 +1,6 @@
+puts <= putstring
+gets <= getsring
+.to_i <= to integer
+.to_f <= to float
+.to_s <= to string
+.chomp <= removes enter character from end of string

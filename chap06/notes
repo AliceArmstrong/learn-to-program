@@ -1,0 +1,5 @@
+.reverse <= reverse characters in string
+.upcase <= converts string to caps
+.downcase <= converts string to lower case
+.capitilize <= capitilizes string
+.center(x) <= centers string with x characters in mind for total length

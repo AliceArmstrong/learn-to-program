@@ -1,0 +1,62 @@
+Arrays and iterators
+
+[] <= empty array
+[5] <= single number array
+['Hello, Goodbye'] <= multiple string array
+flavour = 'vanilla'
+[89.9, flavour, [true, false]] <= array containing number, variable and array
+
+names = ['Ada', 'Belle', 'Chris']
+puts names[0] # <= index 0, puts first element of array (Ada)
+puts names[2] # <= index 2, puts third element of array (Chris)
+puts names[3] # <= nil
+
+Slots in arrays act like variables.
+other_peeps = [] # <= empty array
+other_peeps[3] = 'beebee Meaner' # <= sets string in forth slot
+other_peeps[0] = 'Ah-ha'
+other_peeps[1] = 'Seedee'
+other_peeps[0] = 'beebee Ah-ha'
+puts other_peeps
+
+.each method <= applies code to each element
+
+languages = ['English', 'Norwegian', 'Ruby']
+languages.each do |lang| # <= for each language, do the following code
+puts 'I love ' + lang + '!'
+puts 'Don\'t you?'
+end
+>I love English!
+>Don't you?
+>I love Norwegian!
+>Don't you?
+>I love Ruby!
+
+3.times do # <= execute code x times
+puts 'Hip-Hip-Hooray!'
+end
+>Hip-Hip-Hooray!
+>Hip-Hip-Hooray!
+>Hip-Hip-Hooray!
+
+.to_s.join(', ') <= convert to string and join with a comma and space between each element
+
+.push adds an object to the end of your array
+.pop removes the last object from the array (and tells you what it was).
+.last tells you what’s at the end of the array
+
+favorites = []
+favorites.push 'raindrops on roses'
+favorites.push 'whiskey on kittens'
+puts favorites[0]
+puts favorites.last
+puts favorites.length
+puts favorites.pop
+puts favorites
+puts favorites.length
+>raindrops on roses
+>whiskey on kittens
+>2
+>whiskey on kittens
+>raindrops on roses
+>1

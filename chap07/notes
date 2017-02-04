@@ -1,0 +1,41 @@
+Comparison methods
+puts 1 > 2 # <= false
+puts 1 < 2 # <= true
+
+Strings compared by lexicographical ordering. Capital letters before lower case.
+puts 'cat' < 'dog' # <= true
+puts 'cat' > 'dog' # <= false
+puts 'cat' < 'Dog' # <= false
+
+puts 2 < 10 # <= true
+puts '2' < '10' # <= false, looks at first character of string
+
+== equal to
+!= not equal to
+
+Looping
+input = ''
+while input != 'bye'
+  puts input
+  input = gets.chomp
+end
+# loops by repeating answer given by user until 'bye' is entered
+
+|| or
+&& and
+
+i_am_chris = true
+i_am_purple = false
+i_like_beer = true
+i_eat_rocks = false
+
+puts i_am_chris && i_like_beer <= true
+puts i_like_beer && i_eat_rocks <= false
+puts i_am_purple && i_like_beer <= false
+puts i_am_purple && i_eat_rocks <= false
+puts i_am_chris || i_like_beer <= true
+puts i_like_beer || i_eat_rocks <= true
+puts i_am_purple || i_like_beer <= true
+puts i_am_purple || i_eat_rocks <= false
+puts !i_am_purple <= true
+puts !i_am_chris <= false
